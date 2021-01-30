@@ -1,7 +1,8 @@
 const express = require("express");
 const ejs = require("ejs");
 const PORT = 3000;
-const auth = firebase.auth()
+const bodyParser = require('body-parser');
+const auth = firebase.auth();
 
 const app = express();
 
