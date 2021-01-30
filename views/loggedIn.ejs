@@ -1,0 +1,127 @@
+<%- include('partials/header') %>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Titillium Web', sans-serif;}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.avocor.com/wp-content/uploads/2018/09/7-examples-of-teamwork-collaboration-in-the-workplace-featured-image.png");
+  min-height: 90%;
+}
+</style>
+<body>
+
+  
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="toggleMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <img src="logowhite.png"
+        height=20px
+        alt="white logo"
+       >
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+      <a href="#menu" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">how it works?</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About us</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+
+      
+
+      <div class="w3-bar-item w3-hide-small" style="float: right; padding: 5px">
+        <a href="/profile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Profile</a>
+        <a href="/" class="btn btn-lg btn-warning">Signout</a>
+    </div>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <img src="logowhite.png"
+        class="w3-bar-item w3-button w3-padding-large w3-white"
+      height=20px
+       alt="white logo"
+       href="/"
+       >
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+      <a href="#menu" class="w3-bar-item w3-button w3-padding-large">how it works?</a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large">About us</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+      <a href="/profile" class="btn btn-lg btn-secondary">Profile</a>
+    <a href="/" class="btn btn-lg btn-warning">Signout</a>
+    </div>
+</div>
+
+<!-- Options Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+    <div class="w3-content w3-center">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">What would you like to do today?</h1>
+      <a href="/" class="btn btn-lg btn-secondary">Become a tutor/mentor</a>
+      <a href="/" class="btn btn-lg btn-secondary">Become a student/mentee</a><br/><br/>
+      <a href="/" class="btn btn-lg btn-secondary">create a local community service</a>
+      <a href="/" class="btn btn-lg btn-secondary">contribute in local community service</a><br/><br/>
+      <a href="/" class="btn btn-lg btn-secondary">create a local charity</a>
+      <a href="/" class="btn btn-lg btn-secondary">contribute to a local charity</a><br/><br/>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64" id="menu">
+  <div class="w3-content">
+  
+    <h2 class="w3-center" style="margin-bottom:64px">Recent Activities near you:</h2>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+        <p>Hello there haojfa do you do?</p>
+        <p>I m good wby?</p>
+    </div>
+    
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+ </footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+
+
+function toggleMenu() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+
+
+
+
+<%- include('partials/footer') %>
